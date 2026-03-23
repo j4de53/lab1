@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1: Рекурсия</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторная работа №1</h1>
+
+        <!-- Блок 1: Рекурсивные формулы -->
+        <div class="card">
+            <h2>Рекурсивные формулы</h2>
+            <div class="formula-selector">
+                <label for="formulaChoice">Выберите формулу:</label>
+                <select id="formulaChoice">
+                    <option value="11">Вариант 11</option>
+                    <option value="4">Вариант 4</option>
+                </select>
+            </div>
+            <div class="formula-display" id="formulaDisplay"></div>
+            <div class="input-group">
+                <label for="nValue">n = </label>
+                <input type="number" id="nValue" min="1" value="5">
+                <span class="hint" id="nHint">(допустимые значения: 1 … 60)</span>
+                <button id="computeBtn">Вычислить</button>
+            </div>
+            <div class="results">
+                <div class="result-row">
+                    <span>Рекурсивный результат:</span>
+                    <span id="recResult">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Итеративный результат:</span>
+                    <span id="iterResult">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Количество вызовов (рекурсия):</span>
+                    <span id="callCount">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Количество итераций (циклов):</span>
+                    <span id="iterCount">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Время рекурсии:</span>
+                    <span id="recTime">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Время итерации:</span>
+                    <span id="iterTime">—</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 2: Задание 2 – среднее арифметическое -->
+        <div class="card">
+            <h2>Задание 2: Среднее арифметическое последовательности</h2>
+            <p>Введите натуральные числа, завершающиеся 0 (каждое с новой строки или через пробел):</p>
+            <textarea id="sequenceInput" rows="5" placeholder="Например:&#10;5 8 3 0"></textarea>
+            <button id="avgBtn">Вычислить среднее</button>
+            <div class="results">
+                <div class="result-row">
+                    <span>Среднее арифметическое:</span>
+                    <span id="avgResult">—</span>
+                </div>
+                <div class="result-row">
+                    <span>Время рекурсии:</span>
+                    <span id="avgTime">—</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab_recursion.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
